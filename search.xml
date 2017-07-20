@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[github + hexo 搭建网站总结]]></title>
-    <url>%2F2017%2F07%2F17%2Fgithub-hexo-%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99%E6%80%BB%E7%BB%93%2F</url>
-    <content type="text"><![CDATA[欢迎来到 painchris 的博客，这是我的第一篇博客。 本篇博客记录了从昨天晚上开始搭建网站到现在网站基本搭建成型的过程，希望对你有所帮助。 博主的环境 win10 + git version 2.13.0.windows.1 + node-v6.10.3-x64.msi + hexo: 3.3.7 搭建网站的准备需要有一个 github 的账号，安装 git 、node.js 链接： ​ github 主页 git 下载(win版) node.js 下载 安装过程没有什么需要注意的，自己修改安装位置就好，建议 ​ – D:github ​ – git ​ – nodejs 开始安装安装的前提 github 注册好了，git 和 node.js 都安装好了 新建 github 仓库，并命名为username.github.io（固定格式，没有试验，username 为你 github 的用户名） 生成 ssh 免密登录 打开 git bash – 如果你已有 ssh，请忽略这一小步 输入 ssh-keygen -t rsa -C “你的邮箱” 注：大写的 C ​ 如博主的输入为 ssh-keygen - t rsa -C “painchris0795@gmail.com” 接着直接回车就好（三次） 复制 ssh key 到 github 在目录 C:\Users\CC\.ssh 下（目录结构为C:\User\你电脑的用户名\.ssh），打开文件 id_rsa.pub，将里面的代码全部复制 打开 github 主页，点击右上角头像 Settings 在显示页面中选择 SSH and GPG keys 选择 SSH keys 右侧的new 填入 Title （钥匙名称，随便填） 将复制的代码 填入 Key 输入框中 点击Add SSH key 测试 设置是否成功 在 git bash 中输入下面代码 ssh -T git@github.com 如果显示为 The authenticity of host ‘github.com (207.97.227.239)’can’t be established.RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.Are you sure you want to continue connecting (yes/no)? 直接输入 yes 就好，成功 设置用户信息 现在你已经可以通过SSH链接到GitHub了 , 还有一些个人信息需要完善的。 Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信息来做权限的处理 , 输入下面的代码进行个人信息的设置 , 把名称和邮箱替换成你自己的 , 名字必须是你的真名 , 而不是GitHub的昵称。 git config --global user.name &quot;userName&quot;//你的用户名 git config --global user.email &quot;userName@163.com&quot; 查看用户名密码去掉后面的双引内容 安装 hexo 打开 git bash，运行安装 hexo 命令 npm install -g hexo 新建一个文件夹用户存放网站信息，如 D:\hexo 在该目录下右键打开 git bash，输入以下命令 123hexo init // 该命令用于创建一个网站hexo g // 该命令用于生成静态网页hexo s // 该命令启动本地预览，退出 按 Ctrl + C 在浏览器输入 localhost:4000 查看本地网站预览 发布网站到 github page 修改 D:\hexo 下 _config.yml 文件 在文件的最后面将代码修改成如下 deploy: type: git repository: https://github.com/PainChris/painchris.github.io.git branch: master 注：type 必须为 git ​ repository：github 主页 + 用户名 + 一开始创建的仓库 + .git 在 git bash 中输入 hexo d // 发布网站命令 注：如果提示：ERROR Deployer not found: git 输入 npm install hexo-deployer-git –save ​ 输入后会显示一个 WARN，不用担心，这个没有关系，并且代码会成功执行，接着输入 hexo d 就可以，耐心等待，第一次发布成功后大约需要十分钟，https://username.github.io 才能显示界面 ​]]></content>
+    <title><![CDATA[博主 hexo 的配置说明]]></title>
+    <url>%2F2017%2F07%2F19%2F%E5%8D%9A%E4%B8%BB-hexo-%E7%9A%84%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E%2F</url>
+    <content type="text"><![CDATA[博主 hexo 设置前提说明博主主页建立时间为 2017/7/17 ，hexo的版本为 3.3.7，主题为 Next.Mist网站的配置文件 – &gt; 网站的主目录下 _config.yml 文件主题的配置文件 – &gt; 网站的 themes 目录下的主题文件夹下的 _config.yml 文件123安装 Next 主题执行代码 git clone https://github.com/iissnan/hexo-theme-next themes/next修改网站配置文件 _config.yml 中 theme: next 本篇博客不涉及 插件的安装 ##基本命令熟悉一波hexo init 建立网站hexo g 生成静态网页，在网站根目录下自动生成 public 文件夹hexo s 开启本地预览模式，在 localhost:4000 查看hexo s --debug 调试模式hexo clean 清除已生成的静态网页（自动删除 public 文件夹） 顶部导航栏设置 注：搜索 不是通过下面的方法添加的！ 在主题的配置文件中找到 menu： 添加或取消注释以下代码： 1234567home: /archives: /archives/categories: /categories/tags: /tags/remuse: /remuse/about: /about/chain: /chai 设置对应图标：图标不需要下载，只需指定就好，对应的代码从 http://fontawesome.io/icons/ 中查找 建立对应的网页（不建，会 404）在 git bash 输入 hexo n page about系统就会自动新建 about 页面 语言设置 language: zh-Hans 在网站的配置文件中修改 然后在主题的 language 文件夹下修改 zh-hans.yml 文件，添加对应字段的中文注：需要清除原先的静态网页，即 hexo clean 添加本地搜索在主题的配置文件中 搜索字段 ``local_search`` 将``enable: false`` 更改为 ``enable: true`` 主页显示文章缩影修改主题文件中的 *auto_excerpt* 字段，将enable: false 更改为 enable: true 设置分类和标签 头像设置，有两种方法 修改网站的配置文件（推荐） 将心仪的头像放到网站的 source 目录下 修改网站的配置文件，在最后面添加以下代码 avatar: /Taylor Swift4.jpg 修改主题的配置文件忘了，推荐第一种的原因是，主题更换了，头像也会换，而修改网站配置文件则没有这个问题 姓名设置修改网站的配置文件，找到 author 字段，修改为author: 陈昌 即可 分类和标签 编辑新建网页顶部说明信息，添加以下字段：新建的网页存储在 网站主目录下的 source 文件夹下的 _post 文件夹中，名字为 XXX.md ( markdown 文本 ，需要 markdown 编辑器，如 Typora)12categories: 网站搭建 // 分类信息tags: hexo // 标签信息 链接设置 123- 在网站的配置文件中定位 ``Social Links``- 将下面的``#social:`` 取消注释- 并在下方添加链接 如 GitHub: https://github.com/PainChris Cnblogs: http://www.cnblogs.com/cchjl/ 1- 图标则在下方的 ``social-icons: ``中设置，如导航栏]]></content>
       <categories>
         <category>网站搭建</category>
       </categories>
@@ -12,14 +12,15 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[test2]]></title>
-    <url>%2F2017%2F07%2F17%2Ftest2%2F</url>
-    <content type="text"></content>
-  </entry>
-  <entry>
-    <title><![CDATA[测试]]></title>
-    <url>%2F2017%2F07%2F16%2F%E6%B5%8B%E8%AF%95%2F</url>
-    <content type="text"><![CDATA[#搜索搜索]]></content>
+    <title><![CDATA[github + hexo 搭建网站总结]]></title>
+    <url>%2F2017%2F07%2F17%2Fgithub-hexo-%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99%E6%80%BB%E7%BB%93%2F</url>
+    <content type="text"><![CDATA[欢迎来到 painchris 的博客，这是我的第一篇博客。本篇博客记录了从昨天晚上开始搭建网站到现在网站基本搭建成型的过程，希望对你有所帮助。博主的环境 win10 + git version 2.13.0.windows.1 + node-v6.10.3-x64.msi + hexo: 3.3.7这篇写的很烂，留下他给自己一个提醒 最后一点发布网站还行 搭建网站的准备需要有一个 github 的账号，安装 git 、node.js链接：​ github 主页 git 下载(win版) node.js 下载安装过程没有什么需要注意的，自己修改安装位置就好，建议​ – D:github​ – git​ – nodejs 开始安装安装的前提 github 注册好了，git 和 node.js 都安装好了 新建 github 仓库，并命名为username.github.io（固定格式，没有试验，username 为你 github 的用户名） 生成 ssh 免密登录 打开 git bash – 如果你已有 ssh，请忽略这一小步输入 ssh-keygen -t rsa -C “你的邮箱”注：大写的 C​ 如博主的输入为 ssh-keygen - t rsa -C “painchris0795@gmail.com”接着直接回车就好（三次） 复制 ssh key 到 github 在目录 C:\Users\CC\.ssh 下（目录结构为C:\User\你电脑的用户名\.ssh），打开文件 id_rsa.pub，将里面的代码全部复制 打开 github 主页，点击右上角头像 Settings 在显示页面中选择 SSH and GPG keys 选择 SSH keys 右侧的new 填入 Title （钥匙名称，随便填） 将复制的代码 填入 Key 输入框中 点击Add SSH key 测试 设置是否成功 在 git bash 中输入下面代码ssh -T git@github.com 如果显示为The authenticity of host ‘github.com (207.97.227.239)’can’t be established.RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.Are you sure you want to continue connecting (yes/no)? 直接输入 yes 就好，成功 设置用户信息现在你已经可以通过SSH链接到GitHub了 , 还有一些个人信息需要完善的。Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信息来做权限的处理 , 输入下面的代码进行个人信息的设置 , 把名称和邮箱替换成你自己的 , 名字必须是你的真名 , 而不是GitHub的昵称。git config --global user.name &quot;userName&quot;//你的用户名git config --global user.email &quot;userName@163.com&quot;查看用户名密码去掉后面的双引内容 安装 hexo 打开 git bash，运行安装 hexo 命令npm install -g hexo 新建一个文件夹用户存放网站信息，如 D:\hexo 在该目录下右键打开 git bash，输入以下命令 123hexo init // 该命令用于创建一个网站hexo g // 该命令用于生成静态网页hexo s // 该命令启动本地预览，退出 按 Ctrl + C 在浏览器输入 localhost:4000 查看本地网站预览 发布网站到 github page 修改 D:\hexo 下 _config.yml 文件在文件的最后面将代码修改成如下deploy: type: git repository: https://github.com/PainChris/painchris.github.io.git branch: master注：type 必须为 git​ repository：github 主页 + 用户名 + 一开始创建的仓库 + .git 在 git bash 中输入hexo d // 发布网站命令注：如果提示：ERROR Deployer not found: git输入 npm install hexo-deployer-git –save​ 输入后会显示一个 WARN，不用担心，这个没有关系，并且代码会成功执行，接着输入 hexo d 就可以，耐心等待，第一次发布成功后大约需要十分钟，https://username.github.io 才能显示界面​]]></content>
+      <categories>
+        <category>网站搭建</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Hello World]]></title>
