@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-09-01T22:53:37.383Z</updated>
+  <updated>2017-09-01T23:02:38.043Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,12 +20,12 @@
     <link href="http://yoursite.com/2017/07/19/%E5%8D%9A%E4%B8%BB-hexo-%E7%9A%84%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E/"/>
     <id>http://yoursite.com/2017/07/19/博主-hexo-的配置说明/</id>
     <published>2017-07-19T10:59:27.000Z</published>
-    <updated>2017-09-01T22:53:37.383Z</updated>
+    <updated>2017-09-01T23:02:38.043Z</updated>
     
     <content type="html"><![CDATA[<h2 id="博主-hexo-设置"><a href="#博主-hexo-设置" class="headerlink" title="博主 hexo 设置"></a>博主 hexo 设置</h2><h2 id="前提说明"><a href="#前提说明" class="headerlink" title="前提说明"></a>前提说明</h2><p>博主主页建立时间为 2017/7/17 ，hexo的版本为 3.3.7，主题为 Next.Mist<br>网站的配置文件 – &gt; 网站的主目录下 _config.yml 文件<br>主题的配置文件 – &gt; 网站的 themes 目录下的主题文件夹下的 _config.yml 文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">安装 Next 主题</div><div class="line">执行代码	git clone https://github.com/iissnan/hexo-theme-next themes/next</div><div class="line">修改网站配置文件 _config.yml 中 theme: next</div></pre></td></tr></table></figure></p>
 <p><strong>本篇博客不涉及 插件的安装</strong></p>
 <p>##基本命令熟悉一波<br><code>hexo init 建立网站</code><br><code>hexo g 生成静态网页，在网站根目录下自动生成 public 文件夹</code><br><code>hexo s 开启本地预览模式，在 localhost:4000 查看</code><br><code>hexo s --debug 调试模式</code><br><code>hexo clean 清除已生成的静态网页（自动删除 public 文件夹）</code></p>
-<h2 id="顶部导航栏设置"><a href="#顶部导航栏设置" class="headerlink" title="顶部导航栏设置"></a>顶部导航栏设置</h2><p><img src="F:\Hexo\source\pictureAll\博主 hexo 配置说明\顶部导航栏.png" alt="顶部导航栏"><br>    <em>注：搜索 不是通过下面的方法添加的！</em></p>
+<h2 id="顶部导航栏设置"><a href="#顶部导航栏设置" class="headerlink" title="顶部导航栏设置"></a>顶部导航栏设置</h2><p><img src="http://ovmh25w3v.bkt.clouddn.com/%E9%A1%B6%E9%83%A8%E5%AF%BC%E8%88%AA%E6%A0%8F.png" alt="顶部导航栏"><br>    <em>注：搜索 不是通过下面的方法添加的！</em></p>
 <ol>
 <li>在主题的配置文件中找到 menu：</li>
 <li><p>添加或取消注释以下代码：</p>
