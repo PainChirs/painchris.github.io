@@ -104,8 +104,8 @@
 <meta property="og:site_name" content="PainChris">
 <meta property="og:description" content="博主 hexo 设置前提说明博主主页建立时间为 2017/7/17 ，hexo的版本为 3.3.7，主题为 Next.Mist网站的配置文件 – &amp;gt; 网站的主目录下 _config.yml 文件主题的配置文件 – &amp;gt; 网站的 themes 目录下的主题文件夹下的 _config.yml 文件123安装 Next 主题执行代码	git clone https://github.com/i">
 <meta property="og:image" content="f:/Hexo/source/pictureAll/博主%20hexo%20配置说明/顶部导航栏.png">
-<meta property="og:image" content="f:/Hexo/source/pictureAll/博主%20hexo%20配置说明/侧边栏设置.png">
-<meta property="og:updated_time" content="2017-07-20T14:04:22.781Z">
+<meta property="og:image" content="http://ovmh25w3v.bkt.clouddn.com/%E4%BE%A7%E8%BE%B9%E6%A0%8F%E8%AE%BE%E7%BD%AE.png">
+<meta property="og:updated_time" content="2017-09-01T22:53:37.383Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="博主 hexo 的配置说明">
 <meta name="twitter:description" content="博主 hexo 设置前提说明博主主页建立时间为 2017/7/17 ，hexo的版本为 3.3.7，主题为 Next.Mist网站的配置文件 – &amp;gt; 网站的主目录下 _config.yml 文件主题的配置文件 – &amp;gt; 网站的 themes 目录下的主题文件夹下的 _config.yml 文件123安装 Next 主题执行代码	git clone https://github.com/i">
@@ -475,18 +475,18 @@
 <h2 id="添加本地搜索"><a href="#添加本地搜索" class="headerlink" title="添加本地搜索"></a>添加本地搜索</h2><pre><code>在主题的配置文件中 搜索字段 ``local_search``
 将``enable: false`` 更改为 ``enable: true``
 </code></pre><h2 id="主页显示文章缩影"><a href="#主页显示文章缩影" class="headerlink" title="主页显示文章缩影"></a>主页显示文章缩影</h2><pre><code>修改主题文件中的 *auto_excerpt* 字段，将enable: false 更改为 enable: true
-</code></pre><h2 id="设置分类和标签"><a href="#设置分类和标签" class="headerlink" title="设置分类和标签"></a>设置分类和标签</h2><p> <img src="F:\Hexo\source\pictureAll\博主 hexo 配置说明\侧边栏设置.png" alt="侧边栏设置"></p>
+</code></pre><h2 id="设置分类和标签"><a href="#设置分类和标签" class="headerlink" title="设置分类和标签"></a>设置分类和标签</h2><p> <img src="http://ovmh25w3v.bkt.clouddn.com/%E4%BE%A7%E8%BE%B9%E6%A0%8F%E8%AE%BE%E7%BD%AE.png" alt="侧边栏设置"></p>
 <ol>
-<li>头像设置，有两种方法<ol>
+<li>头像设置，有两种方法</li>
 <li>修改网站的配置文件（推荐）<ul>
 <li>将心仪的头像放到网站的 source 目录下</li>
 <li>修改网站的配置文件，在最后面添加以下代码<br> <code>avatar: /Taylor Swift4.jpg</code></li>
 </ul>
 </li>
-<li>修改主题的配置文件<br>忘了，推荐第一种的原因是，主题更换了，头像也会换，而修改网站配置文件则没有这个问题</li>
+<li>修改主题的配置文件<br>  忘了，推荐第一种的原因是，主题更换了，头像也会换，而修改网站配置文件则没有这个问题<ol>
+<li>姓名设置<br>修改网站的配置文件，找到 <code>author</code> 字段，修改为<code>author: 陈昌</code> 即可</li>
 </ol>
 </li>
-<li>姓名设置<br>修改网站的配置文件，找到 <code>author</code> 字段，修改为<code>author: 陈昌</code> 即可</li>
 <li><p>分类和标签</p>
 <ul>
 <li>编辑新建网页顶部说明信息，添加以下字段：<br><strong>新建的网页存储在 网站主目录下的 source 文件夹下的 _post 文件夹中，</strong><br><strong>名字为 XXX.md ( markdown 文本 ，需要 markdown 编辑器，如 <a href="https://typora.io/#windows" target="_blank" rel="external">Typora</a>)</strong><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">categories: 网站搭建   // 分类信息</div><div class="line">tags: hexo            // 标签信息</div></pre></td></tr></table></figure>
