@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-09-01T23:02:38.043Z</updated>
+  <updated>2017-11-04T04:01:13.564Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>spring zip 包如何下载</title>
+    <link href="http://yoursite.com/2017/11/04/spring-zip-%E5%8C%85%E5%A6%82%E4%BD%95%E4%B8%8B%E8%BD%BD/"/>
+    <id>http://yoursite.com/2017/11/04/spring-zip-包如何下载/</id>
+    <published>2017-11-04T03:42:44.000Z</published>
+    <updated>2017-11-04T04:01:13.564Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近在学习SpringMVC框架，然后需要下载Spring3.1.1zip包，结果上官网就懵逼了，不知道怎么下载，然后网上的教程好像大多数都是过时的，最后找的文章说的蛮好，这里记载一下自己的下载方式：</p>
+<ul>
+<li><a href="http://repo.spring.io/release" target="_blank" rel="external">http://repo.spring.io/release</a>   这是官方的<br>直接在该链接下查找，如我就是在<a href="http://repo.spring.io/release/org/springframework/spring/3.2.0.RELEASE/" target="_blank" rel="external">http://repo.spring.io/release/org/springframework/spring/3.2.0.RELEASE/</a> 这个目录下找到我想要的，然后注意是找『spring』，没有前缀也没后缀<br>原文链接：<a href="http://www.cnblogs.com/yjmyzz/p/3847364.html" target="_blank" rel="external">http://www.cnblogs.com/yjmyzz/p/3847364.html</a>  非常感谢</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近在学习SpringMVC框架，然后需要下载Spring3.1.1zip包，结果上官网就懵逼了，不知道怎么下载，然后网上的教程好像大多数都是过时的，最后找的文章说的蛮好，这里记载一下自己的下载方式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://repo.sp
+    
+    </summary>
+    
+      <category term="web" scheme="http://yoursite.com/categories/web/"/>
+    
+    
+      <category term="web杂项" scheme="http://yoursite.com/tags/web%E6%9D%82%E9%A1%B9/"/>
+    
+  </entry>
   
   <entry>
     <title>博主 hexo 的配置说明</title>
@@ -149,37 +177,6 @@ Cnblogs: http://www.cnblogs.com/cchjl/
     
     
       <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2017/07/16/hello-world/"/>
-    <id>http://yoursite.com/2017/07/16/hello-world/</id>
-    <published>2017-07-16T12:52:30.942Z</published>
-    <updated>2017-07-17T09:14:58.075Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-    
-    </summary>
-    
-      <category term="编程" scheme="http://yoursite.com/categories/programming/"/>
-    
-    
-      <category term="one" scheme="http://yoursite.com/tags/one/"/>
     
   </entry>
   

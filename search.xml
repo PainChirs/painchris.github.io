@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[spring zip 包如何下载]]></title>
+    <url>%2F2017%2F11%2F04%2Fspring-zip-%E5%8C%85%E5%A6%82%E4%BD%95%E4%B8%8B%E8%BD%BD%2F</url>
+    <content type="text"><![CDATA[最近在学习SpringMVC框架，然后需要下载Spring3.1.1zip包，结果上官网就懵逼了，不知道怎么下载，然后网上的教程好像大多数都是过时的，最后找的文章说的蛮好，这里记载一下自己的下载方式： http://repo.spring.io/release 这是官方的直接在该链接下查找，如我就是在http://repo.spring.io/release/org/springframework/spring/3.2.0.RELEASE/ 这个目录下找到我想要的，然后注意是找『spring』，没有前缀也没后缀原文链接：http://www.cnblogs.com/yjmyzz/p/3847364.html 非常感谢]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>web杂项</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[博主 hexo 的配置说明]]></title>
     <url>%2F2017%2F07%2F19%2F%E5%8D%9A%E4%B8%BB-hexo-%E7%9A%84%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E%2F</url>
     <content type="text"><![CDATA[博主 hexo 设置前提说明博主主页建立时间为 2017/7/17 ，hexo的版本为 3.3.7，主题为 Next.Mist网站的配置文件 – &gt; 网站的主目录下 _config.yml 文件主题的配置文件 – &gt; 网站的 themes 目录下的主题文件夹下的 _config.yml 文件123安装 Next 主题执行代码 git clone https://github.com/iissnan/hexo-theme-next themes/next修改网站配置文件 _config.yml 中 theme: next 本篇博客不涉及 插件的安装 ##基本命令熟悉一波hexo init 建立网站hexo g 生成静态网页，在网站根目录下自动生成 public 文件夹hexo s 开启本地预览模式，在 localhost:4000 查看hexo s --debug 调试模式hexo clean 清除已生成的静态网页（自动删除 public 文件夹） 顶部导航栏设置 注：搜索 不是通过下面的方法添加的！ 在主题的配置文件中找到 menu： 添加或取消注释以下代码： 1234567home: /archives: /archives/categories: /categories/tags: /tags/remuse: /remuse/about: /about/chain: /chai 设置对应图标：图标不需要下载，只需指定就好，对应的代码从 http://fontawesome.io/icons/ 中查找 建立对应的网页（不建，会 404）在 git bash 输入 hexo n page about系统就会自动新建 about 页面 语言设置 language: zh-Hans 在网站的配置文件中修改 然后在主题的 language 文件夹下修改 zh-hans.yml 文件，添加对应字段的中文注：需要清除原先的静态网页，即 hexo clean 添加本地搜索在主题的配置文件中 搜索字段 ``local_search`` 将``enable: false`` 更改为 ``enable: true`` 主页显示文章缩影修改主题文件中的 *auto_excerpt* 字段，将enable: false 更改为 enable: true 设置分类和标签 头像设置，有两种方法 修改网站的配置文件（推荐） 将心仪的头像放到网站的 source 目录下 修改网站的配置文件，在最后面添加以下代码 avatar: /Taylor Swift4.jpg 修改主题的配置文件 忘了，推荐第一种的原因是，主题更换了，头像也会换，而修改网站配置文件则没有这个问题 姓名设置修改网站的配置文件，找到 author 字段，修改为author: 陈昌 即可 分类和标签 编辑新建网页顶部说明信息，添加以下字段：新建的网页存储在 网站主目录下的 source 文件夹下的 _post 文件夹中，名字为 XXX.md ( markdown 文本 ，需要 markdown 编辑器，如 Typora)12categories: 网站搭建 // 分类信息tags: hexo // 标签信息 链接设置 123- 在网站的配置文件中定位 ``Social Links``- 将下面的``#social:`` 取消注释- 并在下方添加链接 如 GitHub: https://github.com/PainChris Cnblogs: http://www.cnblogs.com/cchjl/ 1- 图标则在下方的 ``social-icons: ``中设置，如导航栏]]></content>
@@ -20,17 +31,6 @@
       </categories>
       <tags>
         <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2017%2F07%2F16%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
-      <categories>
-        <category>编程</category>
-      </categories>
-      <tags>
-        <tag>one</tag>
       </tags>
   </entry>
 </search>
