@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-11-04T04:01:13.564Z</updated>
+  <updated>2017-11-08T08:49:44.480Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,44 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>java 处理Excel中身份证号时精度缺失</title>
+    <link href="http://yoursite.com/2017/11/08/java-%E5%A4%84%E7%90%86Excel%E4%B8%AD%E8%BA%AB%E4%BB%BD%E8%AF%81%E5%8F%B7%E6%97%B6%E7%B2%BE%E5%BA%A6%E7%BC%BA%E5%A4%B1/"/>
+    <id>http://yoursite.com/2017/11/08/java-处理Excel中身份证号时精度缺失/</id>
+    <published>2017-11-08T04:11:08.000Z</published>
+    <updated>2017-11-08T08:49:44.480Z</updated>
+    
+    <content type="html"><![CDATA[<p>当上传的Excel文件中有非常大的数字时，如身份证号，在服务器端获取到的数据默认是科学计数法显示，这个可以有多种方法解决：</p>
+<ol>
+<li><p>使用 DecimalFormat 类来格式化数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"> DecimalFormat df = new DecimalFormat(&quot;0&quot;);  // 格式化number String字符</div><div class="line">return df.format(cell.getNumericCellValue())</div></pre></td></tr></table></figure>
+</li>
+<li><p>使用大数来解决 BigDecimal</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">BigDecimal db = new BigDecimal(cell.getNumericCellValue());</div><div class="line">return db.toPlainString();</div></pre></td></tr></table></figure>
+</li>
+<li><p>使用类 NumberFormat 解决</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">NumberFormat nb = NumberFormat.getInstance();</div><div class="line">nb.setGroupingUsed(false); // 取消每三个数加逗号，如 12,123,123</div><div class="line">return nb.format(cell.getNumericCellValue());</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><strong>我是用以上方法都能将科学计数法显示的格式转换为数字或字符串。但是精度丢失了！</strong><br>一开始以为是DecimalFormat有长度限制，网上说是十七位。后来发现原因并不在这。<br>实际问题出现在Excel中：<strong>excel对数值型数字的有效位数是15位，多于15位的以0代替。</strong>身份证号为19位，所以后面的数字就是被0代替了。<br><em>解决方案：</em> <strong>将数字的存储格式换成文本存储</strong><br><img src="http://ovmh25w3v.bkt.clouddn.com/Excel%E6%96%87%E6%9C%AC.png" alt="Excel修改数字储存格式"><br>然后一切就正常了。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;当上传的Excel文件中有非常大的数字时，如身份证号，在服务器端获取到的数据默认是科学计数法显示，这个可以有多种方法解决：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;使用 DecimalFormat 类来格式化数据&lt;/p&gt;
+&lt;figure class=&quot;highlight plain
+    
+    </summary>
+    
+      <category term="web" scheme="http://yoursite.com/categories/web/"/>
+    
+    
+      <category term="web杂项" scheme="http://yoursite.com/tags/web%E6%9D%82%E9%A1%B9/"/>
+    
+  </entry>
   
   <entry>
     <title>spring zip 包如何下载</title>

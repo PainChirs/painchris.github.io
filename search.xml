@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[java 处理Excel中身份证号时精度缺失]]></title>
+    <url>%2F2017%2F11%2F08%2Fjava-%E5%A4%84%E7%90%86Excel%E4%B8%AD%E8%BA%AB%E4%BB%BD%E8%AF%81%E5%8F%B7%E6%97%B6%E7%B2%BE%E5%BA%A6%E7%BC%BA%E5%A4%B1%2F</url>
+    <content type="text"><![CDATA[当上传的Excel文件中有非常大的数字时，如身份证号，在服务器端获取到的数据默认是科学计数法显示，这个可以有多种方法解决： 使用 DecimalFormat 类来格式化数据 12 DecimalFormat df = new DecimalFormat(&quot;0&quot;); // 格式化number String字符return df.format(cell.getNumericCellValue()) 使用大数来解决 BigDecimal 12BigDecimal db = new BigDecimal(cell.getNumericCellValue());return db.toPlainString(); 使用类 NumberFormat 解决 123NumberFormat nb = NumberFormat.getInstance();nb.setGroupingUsed(false); // 取消每三个数加逗号，如 12,123,123return nb.format(cell.getNumericCellValue()); 我是用以上方法都能将科学计数法显示的格式转换为数字或字符串。但是精度丢失了！一开始以为是DecimalFormat有长度限制，网上说是十七位。后来发现原因并不在这。实际问题出现在Excel中：excel对数值型数字的有效位数是15位，多于15位的以0代替。身份证号为19位，所以后面的数字就是被0代替了。解决方案： 将数字的存储格式换成文本存储然后一切就正常了。]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>web杂项</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[spring zip 包如何下载]]></title>
     <url>%2F2017%2F11%2F04%2Fspring-zip-%E5%8C%85%E5%A6%82%E4%BD%95%E4%B8%8B%E8%BD%BD%2F</url>
     <content type="text"><![CDATA[最近在学习SpringMVC框架，然后需要下载Spring3.1.1zip包，结果上官网就懵逼了，不知道怎么下载，然后网上的教程好像大多数都是过时的，最后找的文章说的蛮好，这里记载一下自己的下载方式： http://repo.spring.io/release 这是官方的直接在该链接下查找，如我就是在http://repo.spring.io/release/org/springframework/spring/3.2.0.RELEASE/ 这个目录下找到我想要的，然后注意是找『spring』，没有前缀也没后缀原文链接：http://www.cnblogs.com/yjmyzz/p/3847364.html 非常感谢]]></content>
